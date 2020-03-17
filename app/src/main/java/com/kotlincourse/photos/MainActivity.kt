@@ -2,6 +2,7 @@ package com.kotlincourse.photos
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.gson.Gson
 import com.kotlincourse.photos.Adapter.PhotosAdapter
 import com.kotlincourse.photos.Models.PhotoContainer
@@ -24,6 +25,8 @@ class MainActivity : AppCompatActivity() {
 
         client = OkHttpClient()
         gson = Gson()
+
+        recycler1.layoutManager = LinearLayoutManager(this)
 
         runBlocking { getPhotos() }
     }

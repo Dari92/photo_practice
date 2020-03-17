@@ -32,11 +32,11 @@ class PhotosAdapter(private val photos: ArrayList<Photo>) : RecyclerView.Adapter
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.tvIdPhoto?.text = photos[position].idPhoto.toString()
-        holder.tvNamePhoto?.text = photos[position].namePhoto
-        holder.tvDescriptionPhoto?.text = photos[position].descriptionPhoto
+        holder.tvIdPhoto?.text = photos[position].id.toString()
+        holder.tvNamePhoto?.text = photos[position].name
+        holder.tvDescriptionPhoto?.text = photos[position].description
 
-        Picasso.get().load(photos[position].urlPhoto).into(holder.ivPhoto)
+        Picasso.get().load(photos[position].photo).into(holder.ivPhoto)
 
     }
 }

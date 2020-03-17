@@ -1,4 +1,4 @@
 package com.kotlincourse.photos.Models
 
-data class Photo(var idPhoto : Int, var namePhoto: String?, var descriptionPhoto: String?, var urlPhoto: String?) {
+data class Photo( var id:String?, var name:String?,var description:String?,var photo:String?) {
 }
